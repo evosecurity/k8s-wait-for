@@ -1,0 +1,13 @@
+name: k8s-wait-for
+id: ari:cloud:compass:7ab74c8c-cdc7-47b4-ac42-498142383c41:component/e7890024-d21a-491e-8eed-88aeb93717f5/30d3db76-219e-4f2b-a361-3dd36beb88aa
+description: A simple script that allows to wait for a k8s service, job or pods to enter a desired state
+configVersion: 1
+typeId: SERVICE
+fields:
+  tier: 4
+links: []
+relationships:
+  DEPENDS_ON: []
+labels:
+  - source:github
+customFields: null
