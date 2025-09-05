@@ -1,5 +1,6 @@
 [![Latest Release](https://img.shields.io/github/v/release/groundnuty/k8s-wait-for?logo=GitHub)](https://github.com/groundnuty/k8s-wait-for/releases/latest)
-[![Build Status](https://travis-ci.org/groundnuty/k8s-wait-for.svg?branch=master)](https://travis-ci.org/github/groundnuty/k8s-wait-for)
+[![Build Status](https://github.com/groundnuty/k8s-wait-for/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/groundnuty/k8s-wait-for/actions/workflows/build-and-publish.yml)
+[![Trivy Security Scan](https://github.com/groundnuty/k8s-wait-for/actions/workflows/trivy.yml/badge.svg)](https://github.com/groundnuty/k8s-wait-for/actions/workflows/trivy.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/607e33a0f020475f867fcf443bdab51b)](https://www.codacy.com/gh/groundnuty/k8s-wait-for/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=groundnuty/k8s-wait-for&amp;utm_campaign=Badge_Grade)
 [![Latest Docker Tag](https://img.shields.io/docker/v/groundnuty/k8s-wait-for?logo=docker)](https://hub.docker.com/r/groundnuty/k8s-wait-for/tags)
 [![Latest GHCR Image](https://ghcr-badge.herokuapp.com/groundnuty/k8s-wait-for/tags?n=1&label=GHCR%20Image)](https://github.com/groundnuty/k8s-wait-for/pkgs/container/k8s-wait-for)
@@ -8,6 +9,8 @@
 
 > This tool is still actively used and working stably despite not too frequent commits! Pull requests are most welcome!
 
+> Important: For kubernetes versions <=1.23, use k8s-wait-for version 2.1 or higher or k8s-wait-for versions 1.*. See [here](https://github.com/groundnuty/k8s-wait-for/issues/60#issuecomment-1313483011).
+
 A simple script that allows waiting for a k8s service, job or pods to enter the desired state.
 
 ## Running
@@ -15,7 +18,7 @@ A simple script that allows waiting for a k8s service, job or pods to enter the 
 You can start simple. Run it on your cluster in a namespace you already have something deployed:
 
 ```bash
-kubectl run k8s-wait-for --rm -it --image ghcr.io/groundnuty/k8s-wait-for:v1.6 --restart Never --command /bin/sh
+kubectl run k8s-wait-for --rm -it --image ghcr.io/groundnuty/k8s-wait-for:v2.0 --restart Never --command /bin/sh
 ```
 
 Read `--help` and play with it!
